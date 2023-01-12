@@ -15,8 +15,8 @@
 
     --font-family__montserrat: 'Montserrat', sans-serif;
     --font-family__fraunces: 'Fraunces', serif;
-    --font-size__paragraph: 14px;
-    --font-size__header: 32px;
+    --font-size__paragraph: 0.875rem;
+    --font-size__header: 2rem;
 }
 
 body{
@@ -24,9 +24,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
-.product{
+main{
     display: flex;
 }
 
@@ -37,7 +37,7 @@ p{
 p.product-type{
     letter-spacing: 4px;
 }
-p.product-name{
+h1{
     font-family: var(--font-family__fraunces);
     font-size: var(--font-size__header);
     color: var(--color__dark-blue);
@@ -49,7 +49,7 @@ p.product-type, p.product-description, p.old{
 .product-price{
     display: flex;
     align-items: center;
-    column-gap: 25px;
+    column-gap: 24px;
 }
 p.old{
     text-decoration: line-through;
@@ -64,7 +64,7 @@ button{
     font-family: var(--font-family__montserrat);
     font-size: var(--font-size__paragraph);
     border: none;
-    padding: 15px 0;
+    padding: 0.94em 0;
     color: var(--color__white);
     display: flex;
     justify-content: center;
@@ -79,7 +79,7 @@ button:hover{
 }
 
 @media screen and (max-width:1440px) {
-    .product{
+    main{
         height: 450px;
         width: 600px;
     }
@@ -93,7 +93,7 @@ button:hover{
     }
     .product-information{
         width: 50%;
-        padding: 30px;
+        padding: 1.875em;
         background-color: var(--color__white);
         border-radius: 0 12px 12px 0;
         display: flex;
@@ -104,15 +104,16 @@ button:hover{
 }
 @media screen and (max-width:768px){
     body{
-        padding: 20px;
+        padding: 1.25em;
     }
-    .product{
+    main{
         flex-direction: column;
-        height: 100%;
+        min-height: 90vh;
+        justify-content: center;
     }
     .product-image{
         width: 100%;
-        height: 40%;
+        min-height: 40%;
         border-radius: 12px 12px 0 0 ;
         background-image: url('../img/image-product-desktop.jpg');
     }
